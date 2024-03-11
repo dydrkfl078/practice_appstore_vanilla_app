@@ -1,0 +1,59 @@
+body {
+  font-size: 16px;
+  font-family: "roboto", "Noto Sans KR", "sans-serif";
+  line-height: 1;
+}
+
+.inner {
+  max-width: 1020px;
+  margin: 0 auto;
+}
+header {
+  background-color: #3e3e3e;
+}
+
+header .main_menu {
+  display: flex;
+  color: #f3f3f3;
+  justify-content: space-between;
+  height: 45px;
+}
+
+header ul li {
+  font-size: 14px;
+  display: flex;
+}
+
+header ul li a {
+  padding: 0 10px;
+  color: #f3f3f3;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  opacity: 0.8;
+}
+
+header ul li a:hover {
+  opacity: 1;
+}
+
+header ul li.header_logo,
+header ul li.btn_search,
+header ul li.btn_shopping_bag {
+  width: 14px;
+  text-indent: -9999px;
+  background-repeat: no-repeat;
+  background-position: 0 13px;
+}
+
+header ul li.header_logo {
+  background-image: url(../images/header_apple.svg);
+}
+
+header ul li.btn_search {
+  background-image: url(../images/header_search.svg);
+}
+
+header ul li.btn_shopping_bag {
+  background-image: url(../images/header_bag.svg);
+}
