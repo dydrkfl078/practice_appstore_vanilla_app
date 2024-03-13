@@ -4,6 +4,9 @@ body {
   line-height: 1;
 }
 
+a {
+  text-decoration: none;
+}
 .inner {
   max-width: 1020px;
   margin: 0 auto;
@@ -24,7 +27,7 @@ header ul li {
   display: flex;
 }
 
-header ul li a {
+header .main_menu > li > a {
   padding: 0 10px;
   color: #f3f3f3;
   text-decoration: none;
@@ -37,23 +40,83 @@ header ul li a:hover {
   opacity: 1;
 }
 
-header ul li.header_logo,
-header ul li.btn_search,
-header ul li.btn_shopping_bag {
+header ul.main_menu > li.header_logo > a,
+header ul.main_menu > li.btn_search > a,
+header ul.main_menu > li.btn_shopping_bag > a {
   width: 14px;
   text-indent: -9999px;
   background-repeat: no-repeat;
   background-position: 0 13px;
 }
 
-header ul li.header_logo {
+header ul li.header_logo > a {
   background-image: url(../images/header_apple.svg);
 }
 
-header ul li.btn_search {
+header ul li.btn_search > a {
   background-image: url(../images/header_search.svg);
 }
 
-header ul li.btn_shopping_bag {
+header ul.main_menu > li.btn_shopping_bag > a {
   background-image: url(../images/header_bag.svg);
+}
+
+/* Shopping_bag */
+header .btn_shopping_bag {
+  position: relative;
+}
+
+header .shopping_bag {
+  position: absolute;
+  background-color: #fff;
+  width: 320px;
+  top: calc(100% + 4px);
+  right: -20px;
+  border-radius: 20px;
+  border: 2px solid #e7e7e7;
+  padding: 20px 10px 10px;
+  box-sizing: border-box;
+}
+
+.main_menu .btn_shopping_bag .shape {
+  width: 20px;
+  height: 10px;
+  overflow: hidden;
+  position: absolute;
+  top: -10px;
+  right: 37px;
+}
+
+.main_menu .btn_shopping_bag .shape::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border: 2px solid #e7e7e7;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: rotate(45deg);
+  transform-origin: 0 0;
+}
+
+.main_menu .btn_shopping_bag .message {
+  font-size: 17px;
+  text-align: center;
+  margin: 30px 0;
+  color: #333;
+}
+
+.main_menu .btn_shopping_bag .shopping_bag ul li > a {
+  display: block;
+  width: 100%;
+  color: #0878a0;
+  border-top: 1px solid #c1c1c1;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 14px;
+}
+
+.main_menu .btn_shopping_bag .shopping_bag ul li > a:hover {
+  text-decoration: underline;
 }
