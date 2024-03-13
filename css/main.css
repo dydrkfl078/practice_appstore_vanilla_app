@@ -46,11 +46,12 @@ header ul.main_menu > li.btn_shopping_bag > a {
   width: 14px;
   text-indent: -9999px;
   background-repeat: no-repeat;
-  background-position: 0 13px;
+  background-position: 10px 13px;
 }
 
 header ul li.header_logo > a {
   background-image: url(../images/header_apple.svg);
+  background-position: center;
 }
 
 header ul li.btn_search > a {
@@ -68,7 +69,8 @@ header .btn_shopping_bag {
 /* Shopping_bag DropDown Menu */
 header .shopping_bag {
   position: absolute;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
   background-color: #fff;
   width: 320px;
   top: calc(100% + 4px);
@@ -77,10 +79,12 @@ header .shopping_bag {
   border: 2px solid #e7e7e7;
   padding: 20px 10px 10px;
   box-sizing: border-box;
+  transition: 0.5s;
 }
 
 header .shopping_bag.show {
-  display: block;
+  visibility: visible;
+  opacity: 1;
 }
 
 .main_menu .btn_shopping_bag .shape {
