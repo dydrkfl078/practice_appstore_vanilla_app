@@ -61,13 +61,14 @@ header ul.main_menu > li.btn_shopping_bag > a {
   background-image: url(../images/header_bag.svg);
 }
 
-/* Shopping_bag */
 header .btn_shopping_bag {
   position: relative;
 }
 
+/* Shopping_bag DropDown Menu */
 header .shopping_bag {
   position: absolute;
+  display: none;
   background-color: #fff;
   width: 320px;
   top: calc(100% + 4px);
@@ -76,6 +77,10 @@ header .shopping_bag {
   border: 2px solid #e7e7e7;
   padding: 20px 10px 10px;
   box-sizing: border-box;
+}
+
+header .shopping_bag.show {
+  display: block;
 }
 
 .main_menu .btn_shopping_bag .shape {
