@@ -146,7 +146,9 @@ header .search_wrap {
   top: 0;
   left: 0;
   width: 100%;
-  display: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.4s;
 }
 
 header .search {
@@ -237,10 +239,30 @@ header .search .auto-completes li:hover a {
   color: #0071ea;
 }
 
+/* SearchBar Animation  */
+header .search input,
+header .search .search-icon,
+header .search .auto-completes h3,
+header .search .auto-completes li {
+  transition: 0.6s;
+  transform: translate(100px, 0);
+}
+
 header.searching .inner ul.main_menu li {
-  display: none;
+  opacity: 0;
+  transform: scale(0.7);
 }
 
 header.searching .search_wrap {
-  display: block;
+  visibility: visible;
+  transition-delay: 0.2s;
+  opacity: 1;
+}
+
+header.searching .search input,
+header.searching .search .search-icon,
+header.searching .search .auto-completes h3,
+header.searching .search .auto-completes li {
+  transition-delay: 0.2s;
+  transform: translate(0, 0);
 }
