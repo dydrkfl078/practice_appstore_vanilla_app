@@ -37,6 +37,7 @@ const searchCloserEl = document.querySelector(".search-closer");
 const shadowEl = headerEl.querySelector(".shadow");
 const headerMenuEls = [...headerEl.querySelectorAll("ul.main_menu li")];
 const searchDelayEls = [...headerEl.querySelectorAll(".search li")];
+const searchInputEl = headerEl.querySelector("input");
 
 searchBtnEl.addEventListener("click", showSearchBar);
 searchCloserEl.addEventListener("click", hideSearchBar);
@@ -51,6 +52,10 @@ function showSearchBar() {
   searchDelayEls.forEach(function (el, index) {
     el.style.transitionDelay = (index * 0.4) / searchDelayEls.length + "s";
   });
+  setTimeout(function () {
+    console.log("setTimeOut!");
+    searchInputEl.focus();
+  }, 600);
 }
 function hideSearchBar() {
   headerEl.classList.remove("searching");
@@ -62,4 +67,6 @@ function hideSearchBar() {
     el.style.transitionDelay = (index * 0.4) / searchDelayEls.length + "s";
   });
   searchDelayEls.reverse();
+
+  searchInputEl.value = "";
 }
