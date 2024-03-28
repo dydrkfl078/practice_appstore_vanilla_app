@@ -651,6 +651,51 @@ nav .nav_menu li.active:hover a {
   transform: translate(600px, 920px);
 }
 
+/* Display Section */
+.display {
+  margin-top: 450px;
+}
+
+/* Display / Notes */
+.display .notes h1 {
+  width: 630px;
+  height: 370px;
+  background-image: url(../images/display_headline.png);
+  transform: translate(104px, 0);
+}
+
+.display .notes .figures {
+  height: 814px;
+  margin-top: 26px;
+}
+
+.display .notes figcaption {
+  width: 145px;
+  height: 45px;
+  background-image: url(../images/display_notes_caption.png);
+  transform: translate(707px, -16px);
+}
+
+/* Display / SharedDisplay */
+
+.display .shareDisplay {
+  margin-top: 120px;
+}
+.display .shareDisplay .figures {
+  height: 630px;
+}
+
+.display .shareDisplay figure {
+  transform: translate(-360px, 0);
+}
+
+.display .shareDisplay figcaption {
+  width: 150px;
+  height: 50px;
+  transform: translate(540px, 660px);
+  background-image: url(../images/display_shareplay_caption.png);
+}
+
 @keyframes sprite-icon {
   0.00% {
     background-position: 0px 0px;
