@@ -74,9 +74,10 @@ function hideSearchBar() {
 const io = new IntersectionObserver(function (entries) {
   entries.forEach(function (entry) {
     if (!entry.isIntersecting) {
-      return;
+      entry.target.classList.remove("show");
+    } else {
+      entry.target.classList.add("show");
     }
-    entry.target.classList.add("show");
   });
 });
 const infoEls = document.querySelectorAll(".info");
