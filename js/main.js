@@ -90,3 +90,17 @@ const infoEls = document.querySelectorAll(".info");
 infoEls.forEach(function (el) {
   io.observe(el);
 });
+
+const playBtn = document.querySelector(".stage .controller--play");
+const pauseBtn = document.querySelector(".stage .controller--pause");
+const videoEl = document.querySelector(".stage video");
+
+playBtn.addEventListener("click", function () {
+  videoEl.play(), playBtn.classList.add("hide");
+  pauseBtn.classList.remove("hide");
+});
+
+pauseBtn.addEventListener("click", function () {
+  videoEl.pause(), pauseBtn.classList.add("hide");
+  playBtn.classList.remove("hide");
+});

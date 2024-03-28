@@ -732,6 +732,39 @@ nav .nav_menu li.active:hover a {
   mask-image: url(../images/camera_video_mask.png);
 }
 
+.camera .stage .controller--play,
+.camera .stage .controller--pause {
+  display: flex;
+  color: var(--color-link);
+  transform: translate(428px, -134px) rotate(-3deg);
+  cursor: pointer;
+  gap: 8px;
+  align-items: center;
+}
+
+.camera .stage .controller--play.hide,
+.camera .stage .controller--pause.hide {
+  display: none;
+}
+
+.camera .stage .controller--play:hover,
+.camera .stage .controller--pause:hover {
+  text-decoration: underline;
+}
+
+.camera .stage .controller--play img,
+.camera .stage .controller--pause img {
+  width: 20px;
+  margin-top: -2px;
+}
+
+.camera .stage figcaption {
+  width: 150px;
+  height: 150px;
+  transform: translate(-150px, 350px);
+  background-image: url(../images/camera_hardware_caption.png);
+}
+
 /* Camera - Edit */
 .camera .edit {
   margin-top: 120px;
