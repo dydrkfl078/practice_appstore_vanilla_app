@@ -138,6 +138,14 @@ a.link::after {
 .info {
   max-width: 330px;
   margin-bottom: 24px;
+  opacity: 0;
+  transform: translate(0, 100px);
+  transition: 1s;
+}
+
+.info.show {
+  opacity: 1;
+  transform: translate(0, 0);
 }
 
 .info .icon {
