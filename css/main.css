@@ -832,6 +832,48 @@ nav .nav_menu li.active:hover a {
   transform: translate(80px, 635px);
 }
 
+/* Accessories Section */
+.accessories {
+  margin-top: 30px;
+}
+
+.accessories h1 {
+  width: 550px;
+  height: 343px;
+  margin: 0 auth;
+  background-image: url(../images/accessories_headline.png);
+}
+
+.accessories .figures {
+  height: 1021px;
+}
+
+.accessories figcaption .caption-memo {
+  background-image: url(../images/accessories_caption_memo.png);
+  transform: translate(750px, -60px);
+  background-repeat: no-repeat;
+  width: 230px;
+  height: 76px;
+}
+
+.accessories figcaption .caption-supports {
+  background-image: url(../images/accessories_caption_supports.png);
+  transform: translate(195px, 740px);
+  width: 200px;
+  height: 78px;
+  background-repeat: no-repeat;
+}
+
+.accessories .infos {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.accessories .infos .info {
+  max-width: 430px;
+}
+
 @keyframes sprite-icon {
   0.00% {
     background-position: 0px 0px;
