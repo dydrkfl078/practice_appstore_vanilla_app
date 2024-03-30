@@ -874,6 +874,74 @@ nav .nav_menu li.active:hover a {
   max-width: 430px;
 }
 
+/* iPad OS Section  */
+.iPadOS {
+  margin-top: 140px;
+}
+
+.iPadOS h1 {
+  width: 580px;
+  height: 349px;
+  background-image: url(../images/ipados_headline.png);
+  transform: translate(160px, -34px);
+}
+
+.iPadOS .infos {
+  align-items: flex-end;
+}
+
+.iPadOS .infos .info {
+  max-width: 430px;
+}
+
+.iPadOS .figures {
+  height: 750px;
+  display: flex;
+}
+
+.iPadOS .figures > div {
+  flex-grow: 1;
+}
+
+.iPadOS .figure-split-view {
+  width: 340px;
+  height: 400px;
+  transform: translate(-240px, -290px);
+}
+
+.iPadOS .figure-split-view figcaption {
+  width: 232px;
+  height: 170px;
+  background-image: url(../images/ipados_split_view_caption.png);
+  transform: translate(140px, -100px);
+}
+
+.iPadOS .figure-widgets {
+  width: 350px;
+  height: 400px;
+  transform: translate(220px, 70px);
+}
+
+.iPadOS .figure-widgets figcaption {
+  background-image: url(../images/ipados_widgets_caption.png);
+  width: 240px;
+  height: 240px;
+  transform: translate(320px, 405px);
+}
+
+.iPadOS .figure-quick-note {
+  width: 430px;
+  height: 600px;
+  transform: translate(-630px, 260px);
+}
+
+.iPadOS .figure-quick-note figcaption {
+  width: 180px;
+  height: 160px;
+  background-image: url(../images/ipados_quick_note_caption.png);
+  transform: translate(490px, 450px);
+}
+
 @keyframes sprite-icon {
   0.00% {
     background-position: 0px 0px;
