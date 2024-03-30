@@ -413,7 +413,7 @@ header .search .textfield input {
   width: 100%;
   height: var(--header-height);
   color: var(--color-white);
-  padding: 0 40px;
+  padding: 13px 40px 0;
   box-sizing: border-box;
   font-size: 17px;
   border: none;
@@ -454,10 +454,12 @@ header .search .auto-completes {
   top: 100%;
   width: 100%;
   left: 0;
+  margin-top: 13px;
   padding: 26px 40px 20px;
   background-color: var(--color-white);
   border-radius: 0 0 18px 18px;
   box-sizing: border-box;
+  z-index: 11;
 }
 
 header .search .auto-completes h3 {
@@ -513,7 +515,7 @@ nav {
   top: 0;
   background-color: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(20px);
-  z-index: 10;
+  z-index: 3;
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -1163,6 +1165,35 @@ nav .nav_menu li.active:hover a {
 
 .environment h1 {
   color: #03a10e;
+}
+
+/* Accessory Show Section */
+.accessory-shop {
+  background-color: var(--color-section);
+}
+
+.accessory-shop .inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.accessory-shop .whiteBox {
+  text-align: center;
+}
+
+.accessory-shop img {
+  margin-top: 40px;
+}
+
+/* Trade Section */
+
+.trade {
+  background-color: var(--color-section);
+}
+
+.trade .inner {
+  text-align: center;
 }
 
 @keyframes sprite-icon {
