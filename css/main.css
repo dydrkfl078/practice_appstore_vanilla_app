@@ -28,6 +28,7 @@ body {
   font-family: "roboto", "Noto Sans KR", "sans-serif";
   line-height: 1;
   color: var(--color-font);
+  word-break: keep-all;
 }
 
 a {
@@ -1067,6 +1068,28 @@ nav .nav_menu li.active:hover a {
 
 .privacy .info {
   max-width: 430px;
+}
+
+/* Accessibility Section */
+
+.accessibility {
+  margin: 50px 0 0 0;
+}
+
+.accessibility h1 {
+  width: 390px;
+  height: 360px;
+  background-image: url(../images/accessibility_headline.png);
+}
+
+.accessibility .info {
+  max-width: 430px;
+}
+
+.accessibility figure {
+  width: 440px;
+  height: 330px;
+  transform: translate(490px, -565px);
 }
 
 @keyframes sprite-icon {
