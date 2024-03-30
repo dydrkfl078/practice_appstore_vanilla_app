@@ -76,14 +76,15 @@ const io = new IntersectionObserver(
   function (entries) {
     entries.forEach(function (entry) {
       if (!entry.isIntersecting) {
-        return;
+        entry.target.classList.remove("show");
       } else {
         entry.target.classList.add("show");
       }
     });
   },
   {
-    threshold: 1,
+    rootMargin: "150px 0px 0px 0px",
+    threshold: 0.3,
   }
 );
 const infoEls = document.querySelectorAll(".info");
