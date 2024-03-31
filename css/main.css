@@ -1196,6 +1196,68 @@ nav .nav_menu li.active:hover a {
   text-align: center;
 }
 
+/* Compare Section */
+
+.compare {
+  background-color: var(--color-section);
+  padding-top: 42px;
+  text-align: center;
+}
+
+.compare .items {
+  display: flex;
+  justify-content: space-around;
+  margin: 67px auto 32px;
+}
+
+.compare .items .item {
+  width: 190px;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.compare .item .thumbnail {
+  height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 50px;
+}
+
+.compare .item ul.colors {
+  display: flex;
+  margin-bottom: 30px;
+  gap: 8px;
+  justify-content: center;
+}
+
+.compare .item ul.colors li {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-font-lightgray);
+  box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.compare .item .name {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.compare .item .price {
+  margin-bottom: 24px;
+  font-size: 18px;
+}
+
+.compare .item .btn {
+  margin: 0 auto 14px;
+}
+
+.compare .item .link {
+  margin-top: 56px;
+  margin-bottom: 46px;
+  font-size: 14px;
+}
+
 @keyframes sprite-icon {
   0.00% {
     background-position: 0px 0px;

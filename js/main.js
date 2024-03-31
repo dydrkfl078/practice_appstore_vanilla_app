@@ -1,3 +1,5 @@
+import iPads from "../data/ipads.js";
+
 // Shopping Bag
 
 const btnShopBagEl = document.querySelector("header .btn_shopping_bag");
@@ -104,4 +106,33 @@ playBtn.addEventListener("click", function () {
 pauseBtn.addEventListener("click", function () {
   videoEl.pause(), pauseBtn.classList.add("hide");
   playBtn.classList.remove("hide");
+});
+
+// '당신에게 맞는 iPad는?' 렌더링
+
+const itemsEl = document.querySelector("section.compare .items");
+iPads.forEach(function (iPad) {
+  const itemEl = document.createElement("div");
+  itemEl.classList.add("item");
+
+  let colorList = "";
+  iPad.colors.forEach(function (color) {
+    colorList += `<li style="background-color: ${color};"></li>`;
+  });
+
+  itemEl.innerHTML = /* html */ `
+    <div class="thumbnail">
+      <img src="${iPad.thumbnail}" alt="${iPad.name}"/>
+    </div>
+    <ul class="colors">
+      ${colorList}
+    </ul>
+    <h3 class="name">${iPad.name}</h3>
+    <p class="tagline">${iPad.tagline}</p>
+    <p class="price">￦${iPad.price.toLocaleString("en-US")}</p>
+    <button class="btn">구입하기</button>
+    <a href="${iPad.url}" class="link">더 알아보기</a>  
+  `;
+
+  itemsEl.append(itemEl);
 });
