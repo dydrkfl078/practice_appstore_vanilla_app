@@ -1,4 +1,5 @@
 import iPads from "../data/ipads.js";
+import navigations from "../data/navigations.js";
 
 // Shopping Bag
 
@@ -133,6 +134,36 @@ iPads.forEach(function (iPad) {
     <button class="btn">구입하기</button>
     <a href="${iPad.url}" class="link">더 알아보기</a>  
   `;
-
   itemsEl.append(itemEl);
 });
+
+const navigationsEl = document.querySelector("footer .navigations");
+navigations.forEach(function (nav) {
+  const navEl = document.createElement("div");
+  navEl.classList.add("map");
+
+  let mapList = "";
+  nav.maps.forEach(function (map) {
+    mapList += /* html */ `
+      <li>
+        <a href="${map.url}">${map.name}</a>
+      </li>
+    `;
+  });
+
+  navEl.innerHTML = /* html */ `
+    <h3>
+      <span class="text">${nav.title}</span>
+    </h3>
+    <ul>
+      ${mapList}
+    </ul>
+
+
+  `;
+
+  navigationsEl.append(navEl);
+});
+
+const thisYearEl = document.querySelector(".thisyear");
+thisYearEl.textContent = new Date().getFullYear();

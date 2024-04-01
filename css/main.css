@@ -563,6 +563,11 @@ nav .nav_menu li.active:hover a {
   color: var(--color-font);
 }
 
+/* Main Page */
+main {
+  overflow-x: hidden;
+}
+
 /* Hero Content */
 
 .hero {
@@ -1313,6 +1318,134 @@ footer .warning li {
   color: var(--color-font-darkgray);
 }
 
+/* BreadCrumbs */
+
+footer .breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+footer .breadcrumbs a.apple-logo {
+  width: 16px;
+  height: 16px;
+  background-image: url(../images/path_apple.svg);
+}
+
+footer .breadcrumbs a {
+  position: relative;
+  font-size: 14px;
+  color: var(--color-font-darkgray);
+}
+
+footer .breadcrumbs a:hover {
+  text-decoration: underline;
+}
+
+footer .breadcrumbs a::after {
+  content: "";
+  background-image: url(../images/path_div.svg);
+  width: 8px;
+  height: 16px;
+  position: absolute;
+  margin: auto;
+  right: -18px;
+  top: 0;
+  bottom: 0;
+}
+
+footer .breadcrumbs a:last-child::after {
+  display: none;
+}
+
+/* Footer - Navigations */
+footer .navigations {
+  display: flex;
+  flex-direction: column;
+  height: 364px;
+  flex-wrap: wrap;
+  padding-top: 32px;
+  align-content: space-between;
+}
+
+footer .navigations .text {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+footer .navigations ul {
+  margin: 10px 0 34px;
+}
+
+footer .navigations ul li {
+  margin: 10px 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--color-font-lightgray);
+}
+
+footer .navigations ul a:hover {
+  text-decoration: underline;
+}
+
+/* Footer - Contact */
+
+footer .contact {
+  font-size: 14px;
+  padding: 50px 0 10px;
+}
+
+footer .contact a {
+  color: var(--color-link);
+}
+
+/* Footer - Page Info */
+
+footer .pageinfo {
+  padding: 20px 0 60px;
+  display: flex;
+  font-size: 15px;
+  border-top: 1px solid var(--color-border);
+  justify-content: start;
+  gap: 50px;
+}
+
+footer .copyright {
+  font-size: 14px;
+}
+
+footer .pageinfo .terms {
+  flex-grow: 1;
+}
+
+footer .pageinfo .terms ul {
+  display: flex;
+  gap: 20px;
+}
+
+footer .pageinfo .terms ul li {
+  position: relative;
+  font-weight: 500;
+}
+
+footer .pageinfo .terms ul li a:hover {
+  text-decoration: underline;
+}
+
+footer .pageinfo .terms ul li::after {
+  content: " | ";
+  width: 8px;
+  margin: auto;
+  position: absolute;
+  right: -18px;
+  top: 0;
+  color: var(--color-border);
+}
+
+footer .pageinfo .terms ul li:last-child::after {
+  display: none;
+}
 @keyframes sprite-icon {
   0.00% {
     background-position: 0px 0px;
