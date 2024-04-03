@@ -48,7 +48,7 @@ shadowEl.addEventListener("click", hideSearchBar);
 
 function showSearchBar() {
   headerEl.classList.add("searching");
-  document.documentElement.classList.add("fixed");
+  stopScroll();
   headerMenuEls.reverse().forEach(function (el, index) {
     el.style.transitionDelay = (index * 0.4) / headerMenuEls.length + "s";
   });
@@ -62,7 +62,7 @@ function showSearchBar() {
 }
 function hideSearchBar() {
   headerEl.classList.remove("searching");
-  document.documentElement.classList.remove("fixed");
+  playScroll();
   headerMenuEls.reverse().forEach(function (el, index) {
     el.style.transitionDelay = (index * 0.4) / headerMenuEls.length + "s";
   });
@@ -73,6 +73,25 @@ function hideSearchBar() {
 
   searchInputEl.value = "";
 }
+
+function stopScroll() {
+  document.documentElement.classList.add("fixed");
+}
+function playScroll() {
+  document.documentElement.classList.remove("fixed");
+}
+
+// Header btn_main_menu toggle
+const btnMenuEl = document.querySelector(".main_menu .btn_main_menu");
+btnMenuEl.addEventListener("click", function () {
+  if (headerEl.classList.contains("menuing")) {
+    headerEl.classList.remove("menuing");
+    playScroll();
+  } else {
+    headerEl.classList.add("menuing");
+    stopScroll();
+  }
+});
 
 //  Info Intersection Observer Animation
 const io = new IntersectionObserver(
