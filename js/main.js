@@ -81,12 +81,25 @@ function playScroll() {
   document.documentElement.classList.remove("fixed");
 }
 
+// Header MobileMode - Searching
+const cancelerEl = document.querySelector("header .search-canceler");
+const textfieldEl = document.querySelector("header .textfield");
+
+cancelerEl.addEventListener("click", function () {
+  headerEl.classList.remove("searching--mobile");
+});
+
+textfieldEl.addEventListener("click", function () {
+  headerEl.classList.add("searching--mobile");
+});
+
 // Header btn_main_menu toggle
 const btnMenuEl = document.querySelector(".main_menu .btn_main_menu");
 btnMenuEl.addEventListener("click", function () {
   if (headerEl.classList.contains("menuing")) {
     headerEl.classList.remove("menuing");
     playScroll();
+    headerEl.classList.remove("searching--mobile");
   } else {
     headerEl.classList.add("menuing");
     stopScroll();
