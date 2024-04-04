@@ -43,7 +43,10 @@ const searchDelayEls = [...headerEl.querySelectorAll(".search li")];
 const searchInputEl = headerEl.querySelector("input");
 
 searchBtnEl.addEventListener("click", showSearchBar);
-searchCloserEl.addEventListener("click", hideSearchBar);
+searchCloserEl.addEventListener("click", function (event) {
+  event.stopPropagation();
+  hideSearchBar();
+});
 shadowEl.addEventListener("click", hideSearchBar);
 
 function showSearchBar() {
@@ -81,15 +84,39 @@ function playScroll() {
   document.documentElement.classList.remove("fixed");
 }
 
+// Header MobileMode - Searching
+const cancelerEl = document.querySelector("header .search-canceler");
+const textfieldEl = document.querySelector("header .textfield");
+
+cancelerEl.addEventListener("click", function () {
+  headerEl.classList.remove("searching--mobile");
+});
+
+textfieldEl.addEventListener("click", function () {
+  headerEl.classList.add("searching--mobile");
+  searchInputEl.focus();
+});
+
 // Header btn_main_menu toggle
 const btnMenuEl = document.querySelector(".main_menu .btn_main_menu");
 btnMenuEl.addEventListener("click", function () {
   if (headerEl.classList.contains("menuing")) {
     headerEl.classList.remove("menuing");
     playScroll();
+    searchInputEl.value = "";
+    headerEl.classList.remove("searching--mobile");
   } else {
     headerEl.classList.add("menuing");
     stopScroll();
+  }
+});
+
+// Exception Handling - Searching, Searching--mobile
+window.addEventListener("resize", function () {
+  if (this.window.innerWidth >= 740) {
+    headerEl.classList.remove("searching");
+  } else {
+    headerEl.classList.remove("searching--mobile");
   }
 });
 
