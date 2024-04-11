@@ -1076,6 +1076,7 @@ main {
   .hero figure img {
     width: 437px;
     margin: 0 auto;
+    transform: none;
   }
 
   .hero figure figcaption .caption-camera {
