@@ -99,7 +99,7 @@ a.link::after {
 
 @media (max-width: 1000px) {
   .inner {
-    max-width: 692px;
+    max-width: 892px;
   }
 }
 
@@ -167,6 +167,10 @@ a.link::after {
   opacity: 0;
   transform: translate(0, 100px);
   transition: 1s;
+}
+
+.info.info--large {
+  max-width: 430px;
 }
 
 .info.show {
@@ -244,6 +248,28 @@ a.link::after {
   font-size: 21.5px;
   font-weight: 600;
   line-height: 1.5;
+}
+
+@media (max-width: 1000px) {
+  .info {
+    max-width: 210px;
+    margin-bottom: 12px;
+  }
+  body .info.info--large {
+    max-width: 250px;
+  }
+  .info a.link {
+    font-size: 15.5px;
+  }
+  .info .icon {
+    transform: scale(0.8);
+  }
+  .info p {
+    font-size: 17.5px;
+  }
+}
+@media (max-width: 740px) {
+  /* TODO */
 }
 
 .whiteBox {
@@ -1131,6 +1157,46 @@ main {
   transform: translate(700px, -40px);
 }
 
+/* Power-MultipleApps Mobile / Tablet */
+@media (max-width: 1000px) {
+  .power .multiple-apps h1 {
+    transform: scale(0.7) translate(0, 0);
+  }
+  .power .multiple-apps .figures {
+    height: 500px;
+  }
+
+  .power .multiple-apps .figures figure {
+    position: relative;
+  }
+
+  .power .multiple-apps .figures figure img {
+    transform: scale(0.7) translate(-150px, -220px);
+  }
+  .power .multiple-apps .figures figure figcaption {
+    transform: scale(0.9) translate(530px, -100px);
+  }
+}
+@media (max-width: 740px) {
+  /*   .power .multiple-apps h1 {
+    transform: scale(0.4) translate(0, 0);
+  }
+  .power .multiple-apps .figures {
+    height: 400px;
+  }
+
+  .power .multiple-apps .figures figure {
+    position: relative;
+  }
+
+  .power .multiple-apps .figures figure img {
+    transform: scale(0.5) translate(-300px, -550px);
+  }
+  .power .multiple-apps .figures figure figcaption {
+    transform: scale(0.8) translate(510px, -160px);
+  } */
+}
+
 /* Power - Arcade */
 .power .arcade {
   margin-top: 60px;
@@ -1151,6 +1217,23 @@ main {
   transform: translate(483px, 673px);
 }
 
+@media (max-width: 1000px) {
+  .power .arcade {
+    margin-top: 0;
+  }
+  .power .arcade .figures {
+    height: 200px;
+  }
+
+  .power .arcade .figures figure img {
+    transform: scale(0.6) translate(0, -130px);
+  }
+
+  .power .arcade .figures figure figcaption {
+    transform: scale(0.8) translate(600px, 590px);
+  }
+}
+
 /* Power - Create */
 .power .create {
   margin-top: 60px;
@@ -1169,6 +1252,16 @@ main {
   height: 46px;
   background-image: url(../images/power_create_caption.png);
   transform: translate(600px, 920px);
+}
+
+@media (max-width: 1000px) {
+  .power .create .figures {
+    height: 700px;
+  }
+
+  .power .create .figures figure img {
+    transform: scale(0.7) translate(-150px, -200px);
+  }
 }
 
 /* Display Section */
@@ -1385,10 +1478,6 @@ main {
   justify-content: space-around;
 }
 
-.accessories .infos .info {
-  max-width: 430px;
-}
-
 /* iPad OS Section  */
 .iPadOS {
   margin-top: 140px;
@@ -1470,7 +1559,6 @@ main {
 }
 
 .apps .info {
-  max-width: 430px;
   padding: 34px 64px 0;
 }
 
