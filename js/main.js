@@ -120,6 +120,30 @@ window.addEventListener("resize", function () {
   }
 });
 
+// Sticky Header - Navigation Bar - MobileMode
+const navEl = document.querySelector("nav");
+const navMenuToggleEl = navEl.querySelector(".nav_menu_toggler");
+const navShadowEl = navEl.querySelector(".shadow");
+
+navMenuToggleEl.addEventListener("click", function () {
+  if (navEl.classList.contains("menuing")) {
+    navEl.classList.remove("menuing");
+  } else {
+    navEl.classList.add("menuing");
+  }
+});
+window.addEventListener("click", closeNavMenu);
+navShadowEl.addEventListener("click", closeNavMenu);
+navEl.addEventListener("click", function (event) {
+  event.stopPropagation();
+});
+
+function closeNavMenu() {
+  if (navEl.classList.contains("menuing")) {
+    navEl.classList.remove("menuing");
+  }
+}
+
 //  Info Intersection Observer Animation
 const io = new IntersectionObserver(
   function (entries) {
